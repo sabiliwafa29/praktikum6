@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registrasi & Validasi</title>
+</head>
+<body>
+    <h1>Registrasi KTP</h1>
+    <p>Nama</p>
+    <input id="nama" type="text">
+    
+    <p>Username</p>
+    <input id="username" type="text">
+    
+    <p>Email</p>
+    <input id="email" type="email">
+    
+    <p>Password</p>
+    <input id="password" type="text">
+    
+    <p>No telpon</p>
+    <input id="telpon" type="text">
+    
+    <p>Jenis kelamin</p>
+	<select id="kelamin">
+		<option value="pilihan">Pilih Jenis Kelamin</option>
+		<option value="cowo">Laki-laki</option>
+		<option value="cewe">Perempuan</option>
+	</select>
+    
+    <p>Alamat website</p>
+    <input id="alamat" type="text">
+    <script>   
+        function myFunction(){
+            var nama=document.getElementById("nama").value;
+			var username=document.getElementById("username").value;
+			var email=document.getElementById("email").value;
+			var password=document.getElementById("password").value;
+			var telpon=document.getElementById("telpon").value;
+			var kelamin=document.getElementById("kelamin").value;
+			var alamat=document.getElementById("alamat").value;
+			
+            if(nama==""){
+                alert("Input Nama");
+            }
+			else if (username=="") {
+				alert("Input Username");
+			}
+			else if(email==""||email.value.indexOf('@',0,'.')==-1){
+				alert("Email Tidak Valid");
+			}
+			else if(password==""||password.value.indexOf('.',0)==-1){
+				alert("Gunakan Password Unik");
+			}
+			else if(telpon==""||isNaN(telpon)){
+				alert("Masukkan No. Telpon yang benar");
+			}
+			else if(kelamin==""){
+				alert("Masukkan Jenis Kelamin");
+			}
+			else if(alamat==""){
+				alert("Masukkan Alamat Website");
+			}
+			else{
+				alert("Registrasi Berhasil");
+			}
+        }
+    </script>
+	<br><br>
+    <button type="button" onclick="myFunction()">Submit</button>
+</body>
+</html>
