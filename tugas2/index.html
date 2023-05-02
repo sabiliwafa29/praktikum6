@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shuffle</title>
+</head>
+<body>
+    <div>
+        <img id="ganti" width="400" height="400"/>
+    </div>
+    <script>
+        var gambar=document.getElementById("ganti");
+        var img_array=[
+            "images/background-of-wild-flowers.jpg", 
+            "images/cosy-corner-with-armchair-and-fireplace.jpg", 
+            "images/glazed-balcony-with-square-window-panes.jpg", 
+            "images/indoor.jpg", 
+            "images/outdoor (1).jpg",
+        ];
+        var index=0;
+        function myFunction()
+        {
+            gambar.src=img_array[index];
+            index++;
+            if(index===img_array.length)
+            {
+                index=0;
+            }
+        }
+        setInterval(myFunction,4000);
+    </script>
+</body>
+</html>
